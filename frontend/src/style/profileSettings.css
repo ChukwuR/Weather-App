@@ -1,0 +1,79 @@
+.profile-settings h2 {
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Responsive image cards */
+.editProfileCard img,
+.changePasswordCard img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.editProfileCard img:hover,
+.changePasswordCard img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive layout for cards */
+.settingsWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.settingsCard {
+  flex: 1 1 300px;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive button layout */
+.functionBtnWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.functionBtnWrap > div {
+  flex: 1 1 150px;
+  max-width: 200px;
+}
+
+.settingsImgWrap {
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  display: inline-block;
+  max-width: 300px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  justify-self: center;
+}
+
+.settingsImgWrap img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+}
+
+@media (max-width: 500px) {
+  .settingsImgWrap {
+    width: 160px;
+    height: 160px;
+    padding: 3px;
+  }
+}

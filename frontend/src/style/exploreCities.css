@@ -1,0 +1,156 @@
+.explore-grid {
+  display: grid;
+  grid-template-areas:
+    "lagos lagos london"
+    "newyork tokyo paris"
+    "cairo sydney rio";
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+}
+
+/* Assign grid areas to each city card */
+.city-card:nth-child(1) { grid-area: lagos; }
+.city-card:nth-child(2) { grid-area: london; }
+.city-card:nth-child(3) { grid-area: newyork; }
+.city-card:nth-child(4) { grid-area: tokyo; }
+.city-card:nth-child(5) { grid-area: paris; }
+.city-card:nth-child(6) { grid-area: cairo; }
+.city-card:nth-child(7) { grid-area: sydney; }
+.city-card:nth-child(8) { grid-area: rio; }
+
+/* .city-card {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 180px;
+  transition: transform 0.2s ease;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.4);
+} */
+
+.city-card {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 180px;
+  transition: transform 0.2s ease;
+  /* position: relative; */
+  overflow: hidden;
+}
+
+.city-card.lg { 
+    grid-column: span 2; 
+    grid-row: span 2; 
+    height: 380px; 
+}
+
+.city-card:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.city-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.city-card p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.error {
+  color: #ef4444;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+/* 🔁 Responsive layout for mobile */
+@media (max-width: 768px) {
+  .explore-grid {
+    grid-template-areas:
+      "lagos"
+      "london"
+      "newyork"
+      "tokyo"
+      "paris"
+      "cairo"
+      "sydney"
+      "rio";
+    grid-template-columns: 1fr;
+  }
+
+  .city-card {
+    height: 160px;
+  }
+}
+
+/* Skeleton base */
+.skeletonExp {
+  background: #e5e7eb;
+  animation: pulse 1.5s infinite ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-radius: 12px;
+  height: 180px;
+  color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Skeleton shimmer animation */
+@keyframes pulse {
+  0% {
+    background-color: #e5e7eb;
+  }
+  50% {
+    background-color: #f3f4f6;
+  }
+  100% {
+    background-color: #e5e7eb;
+  }
+}
+
+/* Skeleton elements */
+.skeleton-title {
+  width: 60%;
+  height: 1.2rem;
+  background-color: #d1d5db;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.skeleton-line {
+  width: 80%;
+  height: 0.9rem;
+  background-color: #d1d5db;
+  border-radius: 4px;
+  margin-bottom: 0.3rem;
+}
+
+.skeleton-line.short {
+  width: 50%;
+}

@@ -1,0 +1,107 @@
+.formContainer,
+.register-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  margin: 30px auto;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 30px;
+  max-width: 800px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+/* Form input styles */
+.formInput {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 25px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.inputBio {
+  height: 60px;
+  border-radius: 20px;
+  resize: vertical;
+}
+
+/* Label styling */
+.formLabel {
+  font-size: 1rem;
+  font-weight: 500;
+  display: block;
+  margin-top: 20px;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Form wrapper */
+.formWrap {
+  margin-top: 20px;
+}
+
+.form-group input, .form-group textarea, .formWrap input{
+  justify-self: center;
+}
+
+.form-group label{
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: large;
+}
+
+/* Buttons */
+.submitBtn {
+  margin-top: 30px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 30px;
+  font-weight: 500;
+  width: auto;
+  cursor: pointer;
+}
+
+.loginBtn {
+  background: #3B82F6;
+  color: white;
+}
+
+.regBtn {
+  background: #22C55E;
+  color: white;
+}
+
+.loginBtn:hover {
+  background: #2563EB;
+}
+
+.regBtn:hover {
+  background: #16A34A;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .formContainer,
+  .register-container {
+    padding: 20px 15px;
+    border-radius: 20px;
+  }
+
+  .formInput {
+    max-width: 100%;
+  }
+
+  .formLabel {
+    font-size: 0.95rem;
+  }
+
+  .submitBtn {
+    width: 100%;
+  }
+}

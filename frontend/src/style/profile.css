@@ -1,0 +1,206 @@
+.profileCard {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  /* gap: 2rem; */
+  /* padding: 1rem; */
+  border: none;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+}
+
+.profileCard div.username{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+}
+
+.profilePicWrap { 
+  width: 100%; 
+  max-width: 400px; 
+  margin: 0 auto;
+}
+
+.profilePicWrap img{
+  object-fit: cover;
+  border-radius: 100%;
+  width: 140px;
+  height: 140px;
+}
+
+.avatar-container {
+  padding-left: 20px; /* Aligns it to the left side */
+}
+.avatar {
+  border-radius: 50%;
+  border: 5px solid white;
+  
+  /* THIS IS THE IMPORTANT PART */
+  margin-top: -100px; /* Pulls the image up by half its height */
+  position: relative; 
+  z-index: 10; /* Ensures it stays above the banner */
+}
+
+.banner {
+  background: url('../images//clouds.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+
+.profile-body {
+  background: white;
+  padding: 0 20px 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.profileCard span, .profileCard p{
+  color: grey;
+  font-weight: bold;
+}
+
+.profileButtonWrap{
+  display: flex;
+  gap: 5px;
+}
+
+.profileButtonWrap button{
+  width: 100%; 
+  max-width: 200px; 
+  padding: 10px;
+}
+
+.weatherComponent {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.favorite-card {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://media.istockphoto.com/id/521714583/photo/new-york-city-midtown-with-empire-state-building-at-sunset.jpg?s=170667a&w=0&k=20&c=U2WgYs-GNWRMKimzFSaQCMLjb_k64ZEJj1qjFNs1a3Y=');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 500px;
+  margin: 90px auto;
+}
+
+.favorite-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.favorite-card p, .favorite-card span {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  padding: 20px 0px;
+}
+
+.favorite-card p{
+  margin-top: 20px;
+}
+
+@media(min-width: 767px){
+  .profile-body{
+    width: 350px;
+    margin-left: 50px;
+  }
+  
+  .profilePicWrap img{
+    width: 190px;
+    height: 190px;
+  }
+
+  .weatherComponent{
+    /* margin-left: auto; */
+    padding-right: 40px;
+  }
+
+  .profileButtonWrap button{
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .profileCard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-body {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0;
+  }
+
+  .profileButtonWrap {
+    justify-content: center;
+  }
+
+  .weatherComponent {
+    padding: 0;
+  }
+}
+
+[data-theme = 'dark']{
+  .profile-body{
+    color: black;
+  }
+}
+
+.skeleton {
+  background-color: #e2e8f0;
+  border-radius: 4px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.avatar-skeleton {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.skeleton-text {
+  height: 16px;
+  margin: 10px 0;
+  width: 80%;
+}
+
+.skeleton-text.short {
+  width: 40%;
+}
+
+.skeleton-text.long {
+  height: 60px;
+  width: 90%;
+}

@@ -1,0 +1,125 @@
+.favorite-btn {
+  background-color: #f4c542;
+  color: #222;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.favorite-btn:hover {
+  background-color: #e0b838;
+}
+
+/* Grid layout for favorite cities */
+.favorite-cities-list {
+  display: grid;
+  grid-template-columns: 1fr; /* Default: 1 column on small screens */
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+/* 2 columns on medium screens */
+@media (min-width: 768px) {
+  .favorite-cities-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3 columns on large screens */
+@media (min-width: 1024px) {
+  .favorite-cities-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card styling */
+.favorite-city-card {
+  background: linear-gradient(135deg, #f8f9fa, #e0e0e0);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.favorite-city-card *{
+    position: relative;
+    z-index: 1;
+    color: #333;
+    text-decoration: none;
+}
+
+.favorite-city-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fffbe6;
+}
+
+.favorite-city-card h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.favorite-city-card .weather-icon {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.favorite-city-card .temp {
+  font-weight: bold;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+/* Empty state */
+.empty-message {
+  text-align: center;
+  color: #F5F5F5;
+  font-style: italic;
+  padding: 2rem;
+  width: 100%;
+}
+
+.empty-message p.exploreLinkTxt{
+    background-color: #F9A825;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.explore-message{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* weather theme */
+.sunny {
+  background-color: #fff3cd; /* warm yellow */
+}
+
+.cloudy {
+  background-color: #dee2e6; /* soft gray */
+}
+
+.rainy {
+  background-color: #cce5ff; /* light blue */
+}
+
+.snowy {
+  background-color: #e0f7fa; /* icy blue */
+}
+
+.stormy {
+  background-color: #d1c4e9; /* moody purple */
+}
+
+.default-weather {
+  background-color: #f8f9fa;
+}

@@ -1,0 +1,29 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222;
+  --card-bg: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] {
+  background: url(images/nightTime.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  --text-color: #f0f0f0;
+  --card-bg: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='light']{
+  background: linear-gradient(rgba(0, 0, 0, 0.045), rgba(0, 0, 0, 0.045)), url(images/Gemini_Generated_Image_h99vngh99vngh99v.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  --bg-color: #f0f0f0;
+  --text-color: #000000;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}

@@ -1,0 +1,20 @@
+.weather-highlights {
+  padding: 2rem 1rem;
+  background: linear-gradient(to right, #f0f4ff, #e8f0fe);
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.weather-highlights h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}

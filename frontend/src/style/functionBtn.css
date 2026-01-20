@@ -1,0 +1,11 @@
+.delete-account-btn{
+    background: rgba(255, 0, 0, 0.865);
+}
+
+.logout-account-btn{
+    background: orangered;
+}
+
+.delete-account-btn, .logout-account-btn{
+    color: white;
+}

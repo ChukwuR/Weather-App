@@ -1,0 +1,15 @@
+/* Desktop */
+@media (min-width: 768px) {
+  .main-content {
+    /* must match sidebar width */
+    margin-left: 220px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .main-content {
+    /* must match bottom navbar height */
+    margin-bottom: 64px;  
+  }
+}

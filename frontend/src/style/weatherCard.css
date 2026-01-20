@@ -1,0 +1,102 @@
+/* .weatherWrapper{
+    background: none;
+    padding: 20px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.weatherCard{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.weatherCard, .windCard{
+    width: 500px;
+    text-align: center;
+    padding: 20px 50px;
+    border-radius: 15px;
+}
+
+.weatherCard h3, .windCard h3, .weatherCard p, .windCard p{
+    color: #424242;
+}
+
+@media(min-width: 767px){
+    .weatherContainer{
+        display: flex;
+        gap: 20px;
+    }
+} */
+
+.weatherWrapper {
+  background: none;
+  padding: 20px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.weatherContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.weatherCard,
+.windCard {
+  flex: 1 1 300px;
+  max-width: 100%;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+.weatherCard {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.weatherCard h3, .windCard h3, .weatherCard p, .windCard p{
+  color: white;
+}
+
+/* Optional: Adjust font sizes for smaller screens */
+@media (max-width: 768px) {
+  .weatherCard,
+  .windCard, .favorite-card {
+    padding: 15px;
+  }
+
+  .weatherCard h3,
+  .windCard h3 {
+    font-size: 1.2rem;
+  }
+
+  .weatherCard p,
+  .windCard p, .favorite-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 992px) { 
+    .weatherContainer { 
+        flex-direction: row; 
+        justify-content: center; 
+        align-items: stretch; 
+    } 
+
+    .weatherCard, .windCard, .favorite-card { 
+        flex: 1 1 45%; 
+        max-width: 500px; 
+    } 
+}

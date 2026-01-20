@@ -1,0 +1,112 @@
+.formContainer{
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  margin: 30px auto;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.formChanges{
+    text-align: center;
+}
+
+.previewImgWrap img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.updateInput {
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin-top: 8px;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #424242;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.saveButton {
+  background: #2563EB;
+  color: white;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.saveButton:hover {
+  background: #1e4db7;
+}
+
+.form-message {
+  margin-top: 15px;
+  color: red;
+  font-size: 0.9rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 20px 15px;
+    border-radius: 15px;
+  }
+
+  .updateInput {
+    max-width: 100%;
+  }
+
+  label {
+    font-size: 0.95rem;
+  }
+
+  .saveButton {
+    width: 100%;
+  }
+}
+
+/* Dark theme support */
+[data-theme='dark'] .updateProfileForm,
+[data-theme='dark'] .change-password-form {
+  color: white;
+}
+
+.form-group *{
+    text-align: center;
+    font-weight: bold;
+}
+
+/* .form-group {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.updateInput {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+} */

@@ -1,0 +1,32 @@
+.homeWrap{
+    padding: 20px;
+}
+
+.exploreContainerHome{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.carousel-heading {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: white;
+}
+
+.carousel-subtext {
+  text-align: center;
+  font-size: 0.95rem;
+  /* color: #ffffffdc; */
+  margin-bottom: 1rem;
+}
+
+[data-theme = 'dark']{
+    .carousel-heading{
+        color: white;
+    }
+
+    .carousel-subtext{
+        color: grey;
+    }
+}

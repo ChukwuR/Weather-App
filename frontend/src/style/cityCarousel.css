@@ -1,0 +1,51 @@
+.city-carousel {
+  display: flex;
+  gap: 20px;
+}
+
+.city-card-scroll {
+  flex: 0 0 auto;
+  width: 250px;
+  max-width: 70vw;
+  border-radius: 15px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  transition: width 0.3s ease;
+}
+
+/* Wider cards on large screens */
+@media (min-width: 1200px) {
+  .city-card-scroll {
+    width: 800px;
+    max-width: 30vw;
+  }
+}
+
+.city-carousel-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.city-background {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.city-background::before { content: ''; position: absolute; inset: 0; background: rgba(0, 0, 0, 0.35); /* Adjust opacity as needed */ z-index: 1; }
+
+.city-overlay {
+  z-index: 2;
+  color: white;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  align-self: center;
+}
