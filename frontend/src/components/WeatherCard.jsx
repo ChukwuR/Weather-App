@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import '../style/WeatherCard.css';
+import '../style/weatherCard.css';
 import '../style/weatherWidget.css'
 import { useTheme } from '../context/ThemeContext';
 import TimeZone from './TimeZone';
