@@ -27,28 +27,6 @@ function Register() {
     }
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setMessage('');
-
-  //   const data = new FormData();
-  //   data.append('username', formData.username);
-  //   data.append('email', formData.email);
-  //   data.append('location', formData.location);
-  //   data.append('password', formData.password);
-  //   if (formData.photo) {
-  //     data.append('photo', formData.photo);
-  //   }
-
-  //   try {
-  //     const res = await axios.post('http://localhost:5000/api/user/register', data);
-  //     setMessage('✅ Registration successful!');
-  //   } catch (err) {
-  //     setMessage(err.response?.data?.error || '❌ Registration failed.');
-  //   }
-  // };
-
-
   const handleSubmit = async (e) => {
   e.preventDefault();
   setMessage('');
@@ -64,7 +42,7 @@ function Register() {
   }
 
   try { 
-    const res = await axios.post('http://localhost:5000/api/user/register', data); 
+    const res = await axios.post(`${import.meta.env.VITE_API_URL}/register`, data); 
     toast.success('✅ Registration successful! Redirecting to login...'); 
     setTimeout(() => { window.location.href = '/login';
     }, 1500); 
