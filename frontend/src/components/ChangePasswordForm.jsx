@@ -31,7 +31,7 @@ function ChangePasswordForm() {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/user/password', {
+      const res = await fetch(`${import.meta.env.VITE_USER_URL}/password`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

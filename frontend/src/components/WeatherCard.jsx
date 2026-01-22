@@ -35,13 +35,13 @@ function WeatherCard() {
   const fetchWeather = async (lat, lon) => {
     try {
       setLoading(true);
-      const weatherRes = await fetch(`http://localhost:5000/api/weather?lat=${lat}&lon=${lon}`);
+      const weatherRes = await fetch(`${import.meta.env.VITE_WEATHER_URL}?lat=${lat}&lon=${lon}`);
       const weatherData = await weatherRes.json();
       if (!weatherRes.ok) throw new Error(weatherData.error);
       setWeather(weatherData);
       updateTheme(weatherData, weatherData.sunrise, weatherData.sunset);
 
-      const forecastRes = await fetch(`http://localhost:5000/api/weather/forecast?lat=${lat}&lon=${lon}`);
+      const forecastRes = await fetch(`${import.meta.env.VITE_WEATHER_URL}/forecast?lat=${lat}&lon=${lon}`);
       const forecastData = await forecastRes.json();
       if (!forecastRes.ok) throw new Error(forecastData.error);
       const daily = forecastData.list.filter(item => item.dt_txt.includes('12:00:00'));
@@ -59,13 +59,13 @@ function WeatherCard() {
     const fetchByCity = async () => {
       try {
         setLoading(true);
-        const weatherRes = await fetch(`http://localhost:5000/api/weather?city=${encodeURIComponent(city)}`);
+        const weatherRes = await fetch(`${import.meta.env.VITE_WEATHER_URL}?city=${encodeURIComponent(city)}`);
         const weatherData = await weatherRes.json();
         if (!weatherRes.ok) throw new Error(weatherData.error);
         setWeather(weatherData);
         updateTheme(weatherData, weatherData.sunrise, weatherData.sunset);
 
-        const forecastRes = await fetch(`http://localhost:5000/api/weather/forecast?city=${encodeURIComponent(city)}`);
+        const forecastRes = await fetch(`${import.meta.env.VITE_WEATHER_URL}/forecast?city=${encodeURIComponent(city)}`);
         const forecastData = await forecastRes.json();
         if (!forecastRes.ok) throw new Error(forecastData.error);
         const daily = forecastData.list.filter(item => item.dt_txt.includes('12:00:00'));

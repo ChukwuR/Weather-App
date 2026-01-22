@@ -46,7 +46,7 @@ const removeFavorite = async (cityToRemove) => {
 
     for (const city of favorites) {
       try {
-        const res = await fetch(`http://localhost:5000/api/weather?city=${encodeURIComponent(city)}`);
+        const res = await fetch(`${import.meta.env.VITE_FAVORITES_URL}?city=${encodeURIComponent(city)}`);
         const data = await res.json();
         results[city] = {
           temp: data.temperature,

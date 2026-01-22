@@ -11,7 +11,7 @@ function DeleteAccountButton() {
     const token = localStorage.getItem('token');
 
     try {
-      const res = await fetch('http://localhost:5000/api/user/delete', {
+      const res = await fetch(`${import.meta.env.VITE_USER_URL}/delete`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`

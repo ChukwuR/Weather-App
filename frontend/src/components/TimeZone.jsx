@@ -32,8 +32,6 @@ function TimeZone({ weather }) {
   return (
     <div className="sun-times">
       <h1>{getLocalTime(weather.timezone)}</h1>
-      {/* <p>🌅 Sunrise: {formatTime(weather.sunrise, weather.timezone)}</p>
-      <p>🌇 Sunset: {formatTime(weather.sunset, weather.timezone)}</p> */}
     </div>
   );
 }

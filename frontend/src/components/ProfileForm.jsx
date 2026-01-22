@@ -21,7 +21,7 @@ function ProfileForm() {
   useEffect(() => {
     // Fetch current user info
     const token = localStorage.getItem('token');
-    fetch('http://localhost:5000/api/user/me', {
+    fetch(`${import.meta.env.VITE_USER_URL}/me`, {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -36,7 +36,7 @@ function ProfileForm() {
           bio: data.bio || '',
         }));
         if (data.photo) {
-          setPreview(`http://localhost:5000/uploads/${data.photo}`);
+          setPreview(`${import.meta.env.VITE_UPLOADS_URL}/${data.photo}`);
         }
       })
       .catch(err => {
@@ -67,7 +67,7 @@ function ProfileForm() {
     if (formData.photo) form.append('photo', formData.photo);
 
     try {
-      const res = await fetch('http://localhost:5000/api/user/update', {
+      const res = await fetch(`${import.meta.env.VITE_USER_URL}/update`, {
         method: 'PUT',
         headers: {
           Authorization: `Bearer ${token}`

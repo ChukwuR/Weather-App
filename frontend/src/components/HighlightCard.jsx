@@ -9,7 +9,7 @@ function HighlightCard({ type, city, temperature, description }) {
   };
 
   return (
-    <Link to={`/weather/${encodeURIComponent(city)}`} className={`highlight-card ${type}`}>
+    <Link to={`${import.meta.env.VITE_WEATHER_URL}/${encodeURIComponent(city)}`} className={`highlight-card ${type}`}>
       <div className="highlight-icon">{icons[type]}</div>
       <div className="highlight-content">
         <h3>{type.charAt(0).toUpperCase() + type.slice(1)} City</h3>

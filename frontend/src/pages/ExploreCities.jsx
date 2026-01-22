@@ -55,7 +55,7 @@ function ExploreCities() {
           const results = {};
           for (const city of cities) {
               try {
-          const res = await fetch(`http://localhost:5000/api/weather?city=${encodeURIComponent(city)}`);
+          const res = await fetch(`${import.meta.env.VITE_WEATHER_URL}?city=${encodeURIComponent(city)}`);
           const data = await res.json();
           results[city] = data;
         } catch (err) {
@@ -77,7 +77,7 @@ function ExploreCities() {
     if (!isInList) {
         try {
             setLoading(true);
-            const res = await fetch(`http://localhost:5000/api/weather?city=${encodeURIComponent(searchInput)}`);
+            const res = await fetch(`${import.meta.env.VITE_WEATHER_URL}?city=${encodeURIComponent(searchInput)}`);
             const data = await res.json();
             if (!res.ok) throw new Error(data.error);
             setWeatherData((prev) => ({ ...prev, [searchInput]: data }));
