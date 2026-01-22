@@ -5,12 +5,11 @@ import '../style/form.css'
 function Login() {
   const params = new URLSearchParams(window.location.search); 
   const registered = params.get('registered');
+  const [message, setMessage] = useState('');
 
   useEffect(() => { if (registered) { 
     setMessage('🎉 Account created! Please log in.'); 
   } }, []);
-
-  const [city, setCity] = useState('');
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
