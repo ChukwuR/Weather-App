@@ -7,6 +7,9 @@ const weatherRoutes = require('./routes/weather');
 const path = require('path');
 const favoritesRoutes = require('./routes/favorites');
 
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' });
+
 dotenv.config();
 const app = express();
 
